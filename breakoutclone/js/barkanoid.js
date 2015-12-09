@@ -150,23 +150,23 @@ function phaserCreate(){
 
 function phaserUpdate(){
 
-
-
-
+  /**
+   * SPACEBAR to reset if dead
+   */
   if (dead && release.isDown)
     reset();
 
-
+  /**
+   * SPACEBAR to release ball
+   */
   if(release.isDown && ballOnPaddle && !dead )
   {
     helpers.release();
   }
 
-
-
-  /*
-    Paddle motion + acceleration! :D
-  */
+  /**
+   * Paddle motion / acceleration
+   */
   if (paddle.body.velocity.x > 0)
     paddle.body.velocity.x-=50;
   else if (paddle.body.velocity.x < 0)
@@ -184,7 +184,9 @@ function phaserUpdate(){
   }
 
 
-
+  /**
+   * Paddle motion boundries
+   */
   if (paddle.x < 24){
     paddle.x = 24;
   } else if (paddle.x > game.width - 24){
@@ -201,15 +203,28 @@ function phaserUpdate(){
 
 }
 
+/**
+ * Particle Explosion at desired coords
+ *
+ * @method particleBurst
+ * @param int x - Screen coordinate on x axis
+ * @param int y - Screen coordinate on y axis
+ */
 function particleBurst(x, y){
   emitter.x = x;
   emitter.y = y;
 
-  explosion.play();
+  explosion.play(); //Explosion Sound
 
   emitter.start(true, 2000, null, 20);
 }
 
+
+/**
+ * Reset the game if lost or won
+ *
+ * @method reset
+ */
 function reset()
 {
   dead = false;
@@ -228,8 +243,6 @@ function reset()
   heart0.visible = true;
   heart1.visible = true;
   heart2.visible = true;
-
-
 }
 
 var helpers = {
