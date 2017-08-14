@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+body,html{
+  max-width: 100%;
+  overflow-x:hidden;
+  height:100%;
+  margin: 0;
+  z-index: -4;
+}
+
+body{
+  font-family: "Courier New",Courier,monospace;
+  color:black;
+  background-color:white;
+}
+
+.parallax{
+  position: relative;
+  background-image:url("scott.jpg");
+
+  min-height:100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p{
+  width: 100%;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arrow{
+  border: solid white;
+  opacity: 0.4;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.down{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: .8s;
+}
+
+.down:hover{
+  //transform: rotate(45deg);
+  transform: scale(2);
+}
+
+.newdownarrow{
+  text-decoration: none;
+  font-size:62px;
+  color: white;
+  opacity: .6;
+  transition: .8s;
+}
+
+.newdownarrow:hover{
+  transform:scale(1.4);
+}
+
+.arrowcontainer{
+  position:absolute;
+  bottom: 20px;
+  width:62px;
+  margin:0 auto;
+  left:0;
+  right:0;
+}
+
+.social-icons{
+  text-decoration: none;
+  font-size:62px;
+  color: white;
+  opacity: .6;
+}
+
+/*typewriter effect*/
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 7em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(8) 1s 1 normal both,
+             blinkTextCursor 500ms steps(8) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 7em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,1);}
+  to{border-right-color: transparent;}
+}
+
+button{
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #4CAF50; /* Green */
+  border-radius:10px;
+  color:#4CAF50;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width:150px;
+  height:50px;
+
+  -webkit-transition:width 2s;
+  transition: .5s;
+}
+
+button:hover{
+    background-color: #4CAF50;
+    color:white;
+    transform:scale(1.2);
+}
+
+footer{
+  background-color: #777;
+  height:300px;
+}
+
+.rw-wrapper{
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.rw-sentence{
+  width:10em;
+  margin: 0 auto;
+}
+
+.rw-sentence span{
+  color: #444;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.rw-words{
+  display: inline;
+  text-indent: 10px;
+}
+
+.rw-words span{
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  color: #6b969d;
+}
+
+.rw-words-1 span{
+  animation: rotateWords 18s linear infinite 0s;
+}
+
+.rw-words span:nth-child(2) {
+	animation-delay: 3s;
+	color: #6b889d;
+}
+.rw-words span:nth-child(3) {
+	animation-delay: 6s;
+	color: #6b739d;
+}
+.rw-words span:nth-child(4) {
+	animation-delay: 9s;
+	color: #7a6b9d;
+}
+.rw-words span:nth-child(5) {
+	animation-delay: 12s;
+	color: #8d6b9d;
+}
+.rw-words span:nth-child(6) {
+	animation-delay: 15s;
+	color: #9b6b9d;
+}
+
+@keyframes rotateWords{
+  0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
+    10% { opacity: 0.3; width: 0px; }
+	20% { opacity: 1; width: 100%; }
+    27% { opacity: 0; width: 100%; }
+    100% { opacity: 0; }
+}

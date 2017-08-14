@@ -1,0 +1,52 @@
+/*3D Glasses Effect*/
+header{
+  outline:none;
+  text-decoration:none;
+  position:relative;
+  text-align: center;
+  font-size: 5em;
+  line-height: 1;
+  color:black;
+  display: inline-block;
+  width:100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  transform: translate3d(0px,0px,10px);
+}
+
+/*teal color effect*/
+header::before{
+  z-index: -1;
+  content: attr(data-letters);
+  position: absolute;
+  width:100%;
+  top:0;
+  left: 0;
+  color: #49c5ff;
+  opacity: 1;
+  transition: .8s;
+}
+header:hover::before{
+  transform:translate3d(-5px,0px,2px);
+}
+
+/*Magenta Effect*/
+header::after{
+  z-index:-2;
+  content:attr(data-letters);
+  position: absolute;
+  width:100%;
+  top:0;
+  left: 0;
+  color:#ff9496;
+  opacity: 1;
+  transition: .8s;
+}
+
+header:hover::after{
+
+  transform: translate3d(5px,0px,1px);
+}
