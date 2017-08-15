@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Social Media Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="portfolio/css/test.css">
     <link rel="stylesheet" type="text/css" href="portfolio/css/anims.css">
+    <style>
+    /* social icon test */
+    .fa{
+      padding: 20px;
+      font-size: 30px;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    .fa:hover{
+      opacity: 0.7;
+    }
+
+    .fa-twitter{
+      background: #55ACEE;
+      color:white;
+    }
+
+
+    /*Modal test*/
+    .modal{
+      display:none; /* Hidden by default */
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content{
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    .close{
+      color: #aaaaaa;
+      float:right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus{
+      color: #000;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    </style>
   </head>
 
   <body>
@@ -31,7 +88,25 @@
       </section>
 
       <div style="text-align:center;">
-        <button>Hire Me</button>
+        <button id="myBtn">Hire Me</button>
+      </div>
+
+      <a href="#" class="fa fa-twitter"></a>
+
+      <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Hire Me!</p>
+          <form action="">
+            Name: <input type="text" name="name">
+            <br><br>
+            Email: <input type="email" name="emailAddress">
+            <br><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+
       </div>
 
       <div class="arrowcontainer">
@@ -52,11 +127,32 @@
     <footer>
 
 
-      <p>&copy; 2017 Marcel Dmitri Baarsch | Hand Coded With &#10084;</p>
+      <p>Hand Coded by Marcel Dmitri Baarsch | &copy;2017</p>
     </footer>
 
 
+    <script>
+    var modal = document.getElementById('myModal');
 
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function(){
+      modal.style.display = "block";
+    }
+
+    span.onclick = function(){
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event){
+      if (event.target == modal){
+        modal.style.display = "none";
+      }
+    }
+
+    </script>
 
 
   </body>
