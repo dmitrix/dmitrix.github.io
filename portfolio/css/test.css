@@ -30,7 +30,7 @@ body{
 
 #bgWrapper{
   min-height: 100vh;
-  background-image:url("https://www.transparenttextures.com/patterns/dotnoise-light-grey.png");
+  //background-image:url("https://www.transparenttextures.com/patterns/dotnoise-light-grey.png");
   background-repeat: repeat;
 
 //  background-color:rgba(0,0,0,.1);
@@ -119,7 +119,7 @@ p{
   to{border-right-color: transparent;}
 }
 
-a{
+a.button{
   margin:0;
   background-color: rgba(0,0,0,0);
   border: 2px solid #4CAF50; /* Green */
@@ -136,7 +136,7 @@ a{
   transition: .5s;
 }
 
-a:hover{
+a.button:hover{
     background-color: #4CAF50;
     color:white;
     transform:scale(1.2);
