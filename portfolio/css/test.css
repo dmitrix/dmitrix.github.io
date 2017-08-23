@@ -119,7 +119,8 @@ p{
   to{border-right-color: transparent;}
 }
 
-button{
+a{
+  margin:0;
   background-color: rgba(0,0,0,0);
   border: 2px solid #4CAF50; /* Green */
   border-radius:10px;
@@ -128,14 +129,14 @@ button{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width:150px;
-  height:50px;
-
+  width:120px;
+  height:20px;
+  display:inline-block;
   -webkit-transition:width 2s;
   transition: .5s;
 }
 
-button:hover{
+a:hover{
     background-color: #4CAF50;
     color:white;
     transform:scale(1.2);
