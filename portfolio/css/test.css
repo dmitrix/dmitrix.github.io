@@ -21,7 +21,7 @@ body{
   min-height:100%;
 
   background-attachment: fixed;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,7 +30,7 @@ body{
 
 #bgWrapper{
   min-height: 100vh;
-  //background-image:url("https://www.transparenttextures.com/patterns/dotnoise-light-grey.png");
+  background-image:url("https://www.transparenttextures.com/patterns/dotnoise-light-grey.png");
   background-repeat: repeat;
 
 //  background-color:rgba(0,0,0,.1);
