@@ -13,7 +13,7 @@ header{
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0px;
   transform: translate3d(0px,0px,10px);
 }
 
